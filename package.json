@@ -14,6 +14,7 @@
     "jest-junit": "^16.0.0"
   },
   "dependencies": {
+    "git": "^0.1.5",
     "playwright": "^1.51.1"
   }
 }
