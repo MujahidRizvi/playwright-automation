@@ -1,4 +1,5 @@
 import { defineConfig, devices } from '@playwright/test';
+import path from 'path';
 
 /**
  * Read environment variables from file.
@@ -24,8 +25,8 @@ export default defineConfig({
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   //reporter: 'html',
   reporter: [
-    ['junit', { outputFile: 'results.xml' }], // XML Report
-    ['html', { outputFolder: 'html-report', open: 'never' }], // HTML Report
+    ['junit', { outputFile: path.join('xml-report', 'results.xml') }], // XML Report in 'xml-report/' folder
+    ['html', { outputFolder: 'html-report', open: 'never' }] // HTML Report in 'html-report/' folder
   ],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
